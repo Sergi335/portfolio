@@ -1,0 +1,36 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "Actualmente...",
+    title: "Freelance Full Stack Web Developer",
+    description:
+      "Recientemente, he dado inicio a una nueva etapa como desarrollador freelance, enfocándome de manera exclusiva en tecnologías como React, JavaScript y Node.js. Esta decisión surge de mi profundo interés y aprecio por estas tecnologías, que considero el presente y futuro a corto y medio plazo del desarrollo web.",
+    link: "/experience/2024-freelance",
+  },
+  {
+    date: "Junio 2021 - Enero 2024",
+    title: "Full Stack Web Developer  − PcCampus",
+    description:
+      "Mi experiencia en este puesto me permitió no solo mantener y mejorar código heredado, sino también liderar proyectos de desarrollo desde cero, proporcionando soluciones efectivas y personalizadas a los problemas técnicos y comerciales de la empresa.",
+      link: "/experience/2021-pccampus",
+  },
+  {
+    date: "Marzo 2018 - Junio 2021",
+    title: "Freelance Full Stack Web Developer",
+    description:
+      "Después de completar mis estudios, inicié mi carrera profesional como desarrollador freelance, participando en diversos proyectos que abarcaron una amplia gama de tecnologías y desafíos. Uno de los proyectos más significativos y que posteriormente se convirtió en un trampolín para mi incorporación a una empresa fue el rediseño completo de la interfaz de usuario (UI) de PcCampus.net.",
+      link: "/experience/2018-freelance",
+  }
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3 max-w-3xl">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
