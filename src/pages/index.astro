@@ -11,8 +11,8 @@ import Hero from '../components/Hero.astro';
 import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
 import Badge from '../components/Badge.astro';
-import BriefCaseIcon from '../components/BriefCaseIcon.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
+import SocialPill from '../components/SocialPill.astro';
 
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
@@ -26,6 +26,7 @@ const projects = (await getCollection('work'))
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
+
 ---
 
 <BaseLayout>
@@ -38,9 +39,18 @@ const projects = (await getCollection('work'))
 					align="start"
 				>
 					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
+						<SocialPill href="https://linkedin.com/in/sergio-sánchez-dev">
+							<Icon icon="linkedin" color="var(--accent-regular)" size="2.5rem" gradient />
+							LinkedIn
+						</SocialPill>
+						<SocialPill href="https://github.com/sergi335">
+							<Icon icon="github" color="var(--accent-regular)" size="2.5rem" gradient />
+							GitHub
+						</SocialPill>
+						<SocialPill href="mailto:sergiadn335@gmail.com">
+							<Icon icon="email" color="var(--accent-regular)" size="2.5rem" gradient />
+							sergiadn335@gmail.com
+						  </SocialPill>
 					</div>
 				</Hero>
 				
@@ -55,13 +65,13 @@ const projects = (await getCollection('work'))
 				<h2
 					class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
 				>
-					<BriefCaseIcon class="size-7" />
+					<Icon icon="briefcase" color="var(--accent-regular)" size="2.5rem" gradient />
 					Experiencia laboral
 				</h2>
 				<Experience />
 			</section>
 
-			<Skills />
+			<!-- <Skills /> -->
 		</div>
 
 		<main class="wrapper stack gap-20 lg:gap-48">
@@ -149,7 +159,7 @@ const projects = (await getCollection('work'))
 		.roles {
 			margin-top: 0.5rem;
 			display: flex;
-			gap: 0.5rem;
+			gap: 1.5rem;
 		}
 
 		.hero img {

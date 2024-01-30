@@ -81,13 +81,19 @@ import Icon from './Icon.astro';
 			};
 
 			// Toggle the theme when a user clicks the button.
-			button.addEventListener('click', () => setTheme(!this.isDark()));
-
+			button.addEventListener('click', () => {
+				setTheme(!this.isDark());
+				localStorage.setItem('theme', this.isDark() ? 'dark' : 'light');
+			})
+			document.addEventListener("astro:after-swap", () => setTheme(this.isDark()));
 			// Initialize button state to reflect current theme.
 			setTheme(this.isDark());
 		}
 
 		isDark() {
+			if (localStorage.getItem('theme') === 'dark') {
+				return true;
+			}
 			return document.documentElement.classList.contains('theme-dark');
 		}
 	}
