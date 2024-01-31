@@ -6,9 +6,14 @@ img_alt: A bright pink sheet of paper used to wrap flowers curves in front of ri
 description: |
   Recientemente, he dado inicio a una nueva etapa como desarrollador freelance, enfocándome de manera exclusiva en tecnologías como React, JavaScript y Node.js. Esta decisión surge de mi profundo interés y aprecio por estas tecnologías, que considero el presente y futuro a corto y medio plazo del desarrollo web.
 tags:
-  - Dev
-  - Branding
-  - Backend
+  - JavaScript
+  - CSS
+  - HTML
+  - ReactJS
+  - NodeJS
+  - TailwindCSS
+  - Zustand
+  - Astro
 ---
 
 Recientemente, he dado inicio a una nueva etapa como desarrollador freelance, enfocándome de manera exclusiva en tecnologías como React, JavaScript y Node.js. Esta decisión surge de mi profundo interés y aprecio por estas tecnologías, que considero el presente y futuro a corto y medio plazo del desarrollo web.

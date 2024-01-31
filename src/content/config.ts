@@ -6,6 +6,7 @@ export const collections = {
 		schema: z.object({
 			title: z.string(),
 			description: z.string(),
+			description_short: z.string().optional(),
 			publishDate: z.coerce.date(),
 			tags: z.array(z.string()),
 			img: z.string(),
@@ -17,6 +18,7 @@ export const collections = {
 		schema: z.object({
 			title: z.string(),
 			description: z.string(),
+			description_short: z.string().optional(),
 			publishDate: z.coerce.date(),
 			tags: z.array(z.string()),
 			img: z.string(),

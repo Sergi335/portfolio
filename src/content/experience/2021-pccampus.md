@@ -1,14 +1,22 @@
 ---
-title: 2024 PcCampus
+title: 2021 - 2024 Full Stack @PcCampus
 publishDate: 2019-12-01 00:00:00
 img: /assets/stock-2.jpg
 img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
 description: |
   Mi experiencia en este puesto me permitió no solo mantener y mejorar código heredado, sino también liderar proyectos de desarrollo desde cero, proporcionando soluciones efectivas y personalizadas a los problemas técnicos y comerciales de la empresa.
 tags:
-  - Dev
-  - Branding
-  - Backend
+  - JavaScript
+  - CSS
+  - HTML
+  - PHP
+  - PrestaShop
+  - WordPress
+  - Smarty
+  - JQuery
+  - ReactJS
+  - MySQL
+  - UX/UI
 ---
 
 Como Desarrollador de Software y especialista en Mantenimiento de Sistemas en PcCampus, tuve la responsabilidad clave de gestionar y mejorar el código base heredado de la organización. Esta labor implicó la revisión y análisis profundo del código existente, identificando áreas de mejora, corrección de errores y aplicación de soluciones eficientes para mantener y mejorar la funcionalidad del sistema.
