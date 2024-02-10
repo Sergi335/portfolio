@@ -1,11 +1,11 @@
 ---
 title: 2018 - 2021 Full Stack Freelance
 publishDate: 2019-12-01 00:00:00
-img: /assets/stock-2.jpg
+img: /assets/Mock1Destacada.png
 img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
 description: |
   Después de completar mis estudios, inicié mi carrera profesional como desarrollador freelance, participando en diversos proyectos que abarcaron una amplia gama de tecnologías y desafíos. Uno de los proyectos más significativos y que posteriormente se convirtió en un trampolín para mi incorporación a una empresa fue el rediseño completo de la interfaz de usuario (UI) de PcCampus.net.
-description_short: Después de completar mis estudios, inicié mi carrera profesional como desarrollador freelance, participando en diversos proyectos que abarcaron una amplia gama de tecnologías y desafíos.
+description_short: Tras completar mis estudios de <strong>Técnico Superior en Desarrollo de Aplicaciones Web</strong>, inicié mi carrera profesional como desarrollador freelance, participando en diversos proyectos que abarcaron una amplia gama de tecnologías y desafíos. 
 tags:
   - JavaScript
   - CSS
@@ -18,13 +18,14 @@ tags:
   - UX/UI
 ---
 
-Después de completar mis estudios, inicié mi carrera profesional como desarrollador freelance, participando en diversos proyectos que abarcaron una amplia gama de tecnologías y desafíos. 
+#### Heading1
+Uno de los proyectos más significativos y que posteriormente se convirtió en un trampolín para mi incorporación a una empresa fue el rediseño completo de la interfaz de usuario (UI) de <a href="https://pccampus.net" target="_blank">PcCampus</a>.
 
-Uno de los proyectos más significativos y que posteriormente se convirtió en un trampolín para mi incorporación a una empresa fue el rediseño completo de la interfaz de usuario (UI) de PcCampus.net.
+Este proyecto no solo representó una oportunidad para aplicar y expandir mis habilidades técnicas, sino que también me desafió a comprender las necesidades específicas del cliente y traducirlas en una experiencia de usuario mejorada y atractiva.
 
-Este proyecto no solo representó una oportunidad para aplicar y expandir mis habilidades técnicas, sino que también me desafió a comprender las necesidades específicas del cliente y a traducirlas en una experiencia de usuario mejorada y atractiva.
+![UI de PcCampus 2018](/assets/Mock1Destacada.png "UI de PcCampus 2018")
 
-Las tecnologías clave que utilicé para llevar a cabo este rediseño incluyeron:
+Las tecnologías que utilicé para llevar a cabo este rediseño incluyeron:
 
 **HTML5 y CSS**: Implementé las últimas prácticas de HTML5 y CSS para asegurar un diseño moderno y responsive, brindando una experiencia de usuario óptima en diferentes dispositivos y tamaños de pantalla.
 

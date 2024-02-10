@@ -9,14 +9,11 @@ import CallToAction from '../components/CallToAction.astro';
 import Grid from '../components/Grid.astro';
 import Hero from '../components/Hero.astro';
 import Icon from '../components/Icon.astro';
-import Pill from '../components/Pill.astro';
-import Badge from '../components/Badge.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import SocialPill from '../components/SocialPill.astro';
 
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
-import Skills from '../components/Skills.astro';
 import Experience from '../components/Experience.astro';
 
 // Content Fetching: List four most recent work projects
@@ -31,8 +28,13 @@ const projects = (await getCollection('work'))
 
 <BaseLayout>
 	<div class="stack gap-20 lg:gap-48">
-		<div class="wrapper stack gap-8 lg:gap-20">
+		<div class="wrapper stack gap-36 items-center">
 			<header class="hero">
+				<img
+				alt="Sergio smiling in a red plaid shirt and tortoise shell glasses"
+				width="261"
+				src="/assets/portrait3.jpg"
+				/>
 				<Hero
 					title="Hola, soy Sergio Sánchez."
 					tagline="+5 años de experiencia como Full Stack Web Developer. Alicante, España. 👏🤓"
@@ -54,16 +56,10 @@ const projects = (await getCollection('work'))
 					</div>
 				</Hero>
 				
-				<img
-				alt="Sergio smiling in a red plaid shirt and tortoise shell glasses"
-				width="480"
-				height="620"
-				src="/assets/portrait2.jpg"
-				/>
 			</header>
-			<section class="px-10">
+			<section class="lg:px-10 w-full inset-0 h-full bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
 				<h2
-					class="text-3xl font-semibold mb-6 flex gap-x-3 ml-[-6px] items-center text-black/80 dark:text-white/80"
+					class="text-3xl font-semibold mb-16 flex gap-x-3 ml-[8px] items-center text-black/80 dark:text-white/80"
 				>
 					<Icon icon="briefcase" color="var(--accent-regular)" size="2.5rem" gradient />
 					Experiencia laboral
@@ -133,7 +129,7 @@ const projects = (await getCollection('work'))
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 2rem;
+		gap: 3rem;
 	}
 
 	.roles {
@@ -144,16 +140,14 @@ const projects = (await getCollection('work'))
 		aspect-ratio: 5 / 4;
 		object-fit: cover;
 		object-position: top;
-		border-radius: 1.5rem;
+		border-radius: 5px;
 		box-shadow: var(--shadow-md);
 	}
 
 	@media (min-width: 50em) {
 		.hero {
-			display: grid;
-			grid-template-columns: 6fr 4fr;
-			padding-inline: 2.5rem;
-			gap: 3.75rem;
+			display: flex;
+			flex-direction: row;
 		}
 
 		.roles {
@@ -164,7 +158,7 @@ const projects = (await getCollection('work'))
 
 		.hero img {
 			aspect-ratio: 3 / 4;
-			border-radius: 4.5rem;
+			border-radius: 5px;
 			object-fit: cover;
 		}
 	}

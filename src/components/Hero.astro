@@ -11,7 +11,7 @@ const { align = 'center', tagline, title } = Astro.props;
 
 <div class:list={['hero stack gap-8', align]}>
 	<div class="stack gap-8">
-		<h1 class="title flex flex-col text-[38px] items-start gap-8">{title}{Astro.url.pathname === '/' && <Badge>Disponible para trabajar</Badge>}</h1>
+		<h1 class="title flex flex-col text-[38px] items-center lg:items-start gap-8">{title}{Astro.url.pathname === '/' && <Badge>Disponible para trabajar</Badge>}</h1>
 		{tagline && <p class="tagline text-balance">{tagline}</p>}
 	</div>
 	<slot />

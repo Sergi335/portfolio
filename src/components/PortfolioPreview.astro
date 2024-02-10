@@ -6,11 +6,19 @@ interface Props {
 }
 
 const { data, slug } = Astro.props.project;
+// console.log(data.img.split('.').pop())
+const extension = data.img.split('.').pop()
+
 ---
 
 <a class="card" href={`/work/${slug}`}>
 	<span class="title">{data.title}</span>
-	<img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" />
+	{
+		extension === 'webm' ? 
+		<video src={data.img} loop autoplay></video>
+		:
+		<img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" />
+	}
 </a>
 
 <style>
@@ -50,7 +58,13 @@ const { data, slug } = Astro.props.project;
 		height: 100%;
 		object-fit: cover;
 	}
-
+	video {
+		grid-area: 1 / 1 / 3 / 3;
+		width: 100%;
+		height: 100%;
+		-o-object-fit: cover;
+		object-fit: fill;
+	}
 	@media (min-width: 50em) {
 		.card {
 			height: 22rem;
