@@ -128,7 +128,7 @@ const projects = (await getCollection('work'))
 	.hero {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-items: flex-start;
 		gap: 3rem;
 	}
 
@@ -137,9 +137,9 @@ const projects = (await getCollection('work'))
 	}
 
 	.hero img {
-		aspect-ratio: 5 / 4;
-		object-fit: cover;
-		object-position: top;
+		aspect-ratio: 23 / 22;
+		/* object-fit: cover; */
+		/* object-position: top; */
 		border-radius: 5px;
 		box-shadow: var(--shadow-md);
 	}
@@ -157,9 +157,9 @@ const projects = (await getCollection('work'))
 		}
 
 		.hero img {
-			aspect-ratio: 3 / 4;
+			/* aspect-ratio: 3 / 4; */
 			border-radius: 5px;
-			object-fit: cover;
+			/* object-fit: cover; */
 		}
 	}
 
