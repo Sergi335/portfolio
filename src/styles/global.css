@@ -202,7 +202,7 @@ h5 {
 	flex-direction: column;
 }
 .theme-dark strong {
-	color: rgb(254 240 138);
+	color: var(--link-color);
 }
 strong {
 	color: rgb(133 77 14);

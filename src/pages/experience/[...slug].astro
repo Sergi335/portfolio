@@ -44,7 +44,7 @@ const { Content } = await entry.render();
 				</div>
 			</header>
 			<main class="wrapper">
-				<div class="stack gap-20 content">
+				<div class="stack gap-20 content bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
 					<div class="content">
 						<Content />
 					</div>
@@ -92,10 +92,7 @@ const { Content } = await entry.render();
 		font-size: var(--text-lg);
 		max-width: 54ch;
 	}
-
-	.content {
-		justify-content: center;
-	}
+	
 	h4 {
 		margin-bottom: 0;
 	}
@@ -111,7 +108,7 @@ const { Content } = await entry.render();
 		margin: 1.5rem 0;
 	}
 	.content :global(p) {
-		font-size: larger;
+		font-size: medium;
 	}
 	.content :global(img) {
 		border-radius: 1.5rem;
