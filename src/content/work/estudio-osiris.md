@@ -1,7 +1,7 @@
 ---
 title: Estudio Osiris
 publishDate: 2020-03-02 00:00:00
-img: /assets/2021/estudio.png
+img: /assets/estudio1.png
 images: ['/assets/2021/estudio1.png', '/assets/2021/estudio2.png', '/assets/2021/estudio3.png']
 img_alt: Iridescent ripples of a bright blue and pink liquid
 description: |
