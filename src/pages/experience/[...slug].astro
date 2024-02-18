@@ -1,22 +1,24 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content'
+import { type CollectionEntry, getCollection } from "astro:content";
 
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
-import ContactCTA from '../../components/ContactCTA.astro';
-import Hero from '../../components/Hero.astro';
-import Icon from '../../components/Icon.astro';
-import Pill from '../../components/Pill.astro';
+import ContactCTA from "../../components/ContactCTA.astro";
+import Hero from "../../components/Hero.astro";
+import Icon from "../../components/Icon.astro";
+import Pill from "../../components/Pill.astro";
+import WorkGallery from "../../components/WorkGallery.astro";
+import Work from "../work.astro";
 
 interface Props {
-	entry: CollectionEntry<'work'>;
+	entry: CollectionEntry<"work">;
 }
 
 // This is a dynamic route that generates a page for every Markdown file in src/content/
 // Read more about dynamic routes and this `getStaticPaths` function in the Astro docs:
 // https://docs.astro.build/en/core-concepts/routing/#dynamic-routes
 export async function getStaticPaths() {
-	const experience = await getCollection('experience');
+	const experience = await getCollection("experience");
 	return experience.map((entry) => ({
 		params: { slug: entry.slug },
 		props: { entry },
@@ -24,29 +26,55 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+console.log(entry.data);
 
+const { Content } = await entry.render();
 ---
+
 <BaseLayout title={entry.data.title} description={entry.data.description}>
 	<div class="stack gap-20">
-		<div class="stack gap-15">
+		<div class="stack gap-11">
 			<header>
 				<div class="wrapper stack gap-2">
-					<a class="back-link" href="/experience/"><Icon icon="arrow-left" /> Back</a>
+					<a class="back-link" href="/experience/"
+						><Icon icon="arrow-left" /> Back</a
+					>
 					<Hero title={entry.data.title} align="start">
 						<div class="details">
 							<div class="tags">
 								{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
 							</div>
-							<p id="description" class="description text-balance" data-description={entry.data.description_short || ''}></p>
+							<p
+								id="description"
+								class="description text-balance"
+								data-description={entry.data
+									.description_short || ""}
+							>
+							</p>
 						</div>
 					</Hero>
 				</div>
 			</header>
 			<main class="wrapper">
-				<div class="stack gap-20 content bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+				<div
+					class="stack gap-20 content bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"
+				>
 					<div class="content">
 						<Content />
+					</div>
+					<div class="galleries">
+						{
+							entry.data.gallery1 &&
+								entry.data.gallery1.length > 0 && (
+									<WorkGallery images={entry.data.gallery1} />
+								)
+						}
+						{
+							entry.data.gallery2 &&
+								entry.data.gallery2.length > 0 && (
+									<WorkGallery images={entry.data.gallery2} class="columns-2" />
+								)
+						}
 					</div>
 				</div>
 			</main>
@@ -55,11 +83,13 @@ const { Content } = await entry.render();
 	</div>
 	<script>
 		const changeDescription = () => {
-			const $description = document.getElementById('description');
+			const $description = document.getElementById("description");
 			$description.innerHTML = $description.dataset.description;
-		}
+		};
 		changeDescription();
-		document.addEventListener('astro:after-swap', () => changeDescription())
+		document.addEventListener("astro:after-swap", () =>
+			changeDescription(),
+		);
 	</script>
 </BaseLayout>
 
@@ -89,10 +119,10 @@ const { Content } = await entry.render();
 	}
 
 	.description {
-		font-size: var(--text-lg);
+		font-size: large;
 		max-width: 54ch;
 	}
-	
+
 	h4 {
 		margin-bottom: 0;
 	}
@@ -108,15 +138,15 @@ const { Content } = await entry.render();
 		margin: 1.5rem 0;
 	}
 	.content :global(p) {
-		font-size: medium;
+		font-size: large;
 	}
 	.content :global(img) {
-		border-radius: 1.5rem;
+		border-radius: 5px;
 		box-shadow: var(--shadow-sm);
 		background: var(--gradient-subtle);
 		border: 1px solid var(--gray-800);
 		width: 325px;
-    	margin-block: 55px;
+		margin-block: 55px;
 	}
 
 	.content :global(blockquote) {
@@ -142,7 +172,13 @@ const { Content } = await entry.render();
 	.content :global(a:focus) {
 		text-decoration-color: currentColor;
 	}
-
+	.galleries {
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		align-items: center;
+		flex-grow: 1;
+	}
 	@media (min-width: 50em) {
 		.back-link {
 			display: flex;

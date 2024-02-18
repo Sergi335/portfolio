@@ -1,8 +1,8 @@
 ---
 title: Estudio Osiris
 publishDate: 2020-03-02 00:00:00
-img: /assets/estudio.png
-images: ['/assets/estudio1.png', '/assets/estudio2.png', '/assets/estudio3.png']
+img: /assets/2021/estudio.png
+images: ['/assets/2021/estudio1.png', '/assets/2021/estudio2.png', '/assets/2021/estudio3.png']
 img_alt: Iridescent ripples of a bright blue and pink liquid
 description: |
   Diseño de una web para una agencia de diseño y desarrollo web

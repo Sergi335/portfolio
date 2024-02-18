@@ -1,7 +1,7 @@
 ---
 title: PcCampus
 publishDate: 2019-10-02 00:00:00
-img: /assets/pccampus.png
+img: /assets/2018/pccampus.png
 img_alt: Soft pink and baby blue water ripples together in a subtle texture.
 description: |
   Rediseño de la UI de la tienda online PcCampus

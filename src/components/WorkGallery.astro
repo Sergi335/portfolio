@@ -1,0 +1,29 @@
+---
+import "photoswipe/style.css";
+import Icon from "./Icon.astro";
+console.log(Astro.props);
+const { images } = Astro.props;
+---
+
+<div class="pswp-gallery columns-2" id="gallery">
+    {
+        images.map(img => (
+        <a href={img.split('-')[0]} 
+            data-pswp-width={img.split('-')[1]} 
+            data-pswp-height={img.split('-')[2]} 
+            target="_blank">
+            <img src={img.split('-')[0]} alt="" />
+        </a>
+        ))
+    }    
+</div>
+
+<script>
+    import PhotoSwipeLightbox from 'photoswipe/lightbox';
+    const lightbox = new PhotoSwipeLightbox({
+        gallery: "#gallery",
+        children: "a",
+        pswpModule: () => import('photoswipe')
+    });
+    lightbox.init();
+</script>
