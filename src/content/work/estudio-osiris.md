@@ -1,9 +1,9 @@
 ---
 title: Estudio Osiris
 publishDate: 2020-03-02 00:00:00
-img: /assets/estudio1.png
-images: ['/assets/2021/estudio1.png', '/assets/2021/estudio2.png', '/assets/2021/estudio3.png']
-img_alt: Iridescent ripples of a bright blue and pink liquid
+img: /assets/2021/estudio1.png
+gallery1: ['/assets/2021/estudio_0.png-960-720', '/assets/2021/estudio_1.png-960-720', '/assets/2021/estudio_2.png-960-720', '/assets/2021/design_2.png-960-720']
+img_alt: capturas de la web estudioosiris.es
 description: |
   Diseño de una web para una agencia de diseño y desarrollo web
 tags:
@@ -13,7 +13,6 @@ tags:
   - PHP
 ---
 
-Design and deploy of a Web Design Agency
 > Not in production
 
 ### Level-three heading

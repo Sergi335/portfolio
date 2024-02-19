@@ -7,6 +7,7 @@ import ContactCTA from '../../components/ContactCTA.astro';
 import Hero from '../../components/Hero.astro';
 import Icon from '../../components/Icon.astro';
 import Pill from '../../components/Pill.astro';
+import WorkGallery from '../../components/WorkGallery.astro';
 
 interface Props {
 	entry: CollectionEntry<'work'>;
@@ -35,6 +36,7 @@ const extension = entry.data.img.split('.').pop()
 				<div class="wrapper stack gap-2">
 					<a class="back-link" href="/work/"><Icon icon="arrow-left" /> Work</a>
 					<Hero title={entry.data.title} align="start">
+						{entry.data.url && <a class='w-fit' href={entry.data.url} target="_blank">Visitar el proyecto</a>}
 						<div class="details">
 							<div class="tags">
 								{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
@@ -63,6 +65,20 @@ const extension = entry.data.img.split('.').pop()
 				</div>
 					<div class="content">
 						<Content />
+					</div>
+					<div class="galleries">
+						{
+							entry.data.gallery1 &&
+								entry.data.gallery1.length > 0 && (
+									<WorkGallery images={entry.data.gallery1} />
+								)
+						}
+						{
+							entry.data.gallery2 &&
+								entry.data.gallery2.length > 0 && (
+									<WorkGallery images={entry.data.gallery2} class="columns-2" />
+								)
+						}
 					</div>
 				</div>
 			</main>
@@ -101,7 +117,7 @@ const extension = entry.data.img.split('.').pop()
 	}
 
 	.content {
-		max-width: 65ch;
+		/* max-width: 65ch; */
 		margin-inline: auto;
 	}
 

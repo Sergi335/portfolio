@@ -1,11 +1,10 @@
 ---
 import "photoswipe/style.css";
-import Icon from "./Icon.astro";
-console.log(Astro.props);
+const classname = Astro.url.pathname.startsWith('/experience') ? "grid-cols-[repeat(auto-fill,minmax(148px,1fr))]" : "grid-cols-[repeat(auto-fill,minmax(438px,1fr))]";
 const { images } = Astro.props;
 ---
 
-<div class="pswp-gallery columns-2" id="gallery">
+<div class=`pswp-gallery grid ${classname} gap-4` id="gallery">
     {
         images.map((img) => (
             <a
