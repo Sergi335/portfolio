@@ -2,7 +2,8 @@
 title: Zenmarks
 publishDate: 2019-12-01 00:00:00
 img: /assets/2024/zenmarks2.webm
-img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
+gallery1: ['/assets/2024/zenmarks_2.png-960-720', '/assets/2024/zenmarks_1.png-960-720', '/assets/2024/zenmarks_3.png-960-720', '/assets/2024/604shots_so.png-960-720', '/assets/2024/945shots_so.png-960-720', '/assets/2024/717shots_so.png-960-640']
+img_alt: capturas de pantalla de la aplicacion zenmarks
 description: |
   Gestor de marcadores y app de productividad
 tags:
@@ -10,14 +11,20 @@ tags:
   - Node
   - MongoDB
   - Firebase
+  - Express
+  - Zustand
+  - Vite
+  - Vitest
+  - Supertest
 ---
 
-This was one of my first big proyects in React, consist of two parts:
+Este fue uno de mis primeros proyectos grandes con React, me enfrenté (y me enfrento) a múltiples desafíos como gestión de usuarios, autenticación, gestión de archivos, estados globales, etc. consiste en dos partes:
 
-## Backend MVC REST API
+#### Backend MVC REST API
 
-Node, Express, Zod, Firebase, MongoDB Atlas
+Un Backend hecho con tecnologías como Node, Express, Zod, Firebase, MongoDB, etc.  
+Desplegado en una instancia EC2 en AWS.
 
-## Frontend SPA 
+#### Frontend SPA 
 
-Vite, React, Zustand
+Un Frontend hecho con tecnologías como Vite, React, Zustand, etc.

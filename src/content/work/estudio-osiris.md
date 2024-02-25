@@ -13,15 +13,6 @@ tags:
   - PHP
 ---
 
-> Not in production
-
-### Level-three heading
-
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem vitae, varius tellus.
-
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta, finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat. Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor. Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum mollis fringilla.
-
-#### Level-four heading
-
-- We noted this
-- And also this other point
+Como parte de mi trabajo en PcCampus, se me encargó el diseño y despliegue de una Web hecha con Wordpress para una agencia de diseño y desarrollo Web.  
+Los mayores desafíos a los que me tuve que enfrentar fueron en cuanto al diseño de las páginas de la plantilla, teniendo que modificar el JavaScript, PHP y CSS existente para adaptarlo a los diseños y requisitos.  
+Por circunstancias de la empresa el proyecto se abandonó.
